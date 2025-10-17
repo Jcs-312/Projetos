@@ -125,7 +125,7 @@
     </div>
 
     <footer style="margin-top:28px; text-align:center; color:#64748b; font-size:12px;">
-      Exemplo feito por João Saraiva.
+      Exemplo feito por João Saraiva. Adapte para salvar no banco ou enviar e-mail.
     </footer>
   </div>
 
