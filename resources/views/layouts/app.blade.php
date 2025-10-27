@@ -6,7 +6,7 @@
   <title>@yield('title', 'Meu Site')</title>
 
   <style>
-    /* ===== RESET ===== */
+    
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell;
@@ -34,17 +34,17 @@
     }
     .btn:hover { background: #fff; color: #1e40af; }
 
-    /* ===== CONTEÚDO ===== */
+    
     main { padding: 30px; padding-top: 120px; } /* espaço p/ header fixo */
 
-    /* ===== UTILIDADES DA PÁGINA FILHA ===== */
+    
     .container { max-width: 980px; margin: 0 auto; }
     .header { text-align: center; margin-bottom: 28px; }
     .title { font-size: 28px; font-weight: 800; letter-spacing: .2px; }
     .subtitle { color: #fff; margin-top: 6px; }
     .resposta { display: flex; flex-direction: column; gap: 2px;}
     .resposta span {width: max-content;}
-    .telefone {height: max-content;}
+    
 
     .grid { display: grid; grid-template-columns: 1fr; gap: 16px; align-items: start; } /* importante */
     @media (min-width: 900px) { .grid { grid-template-columns: 1.2fr .8fr; } }
@@ -69,16 +69,16 @@
     /* Centraliza o texto dentro das caixinhas */
     .scale select {
       width: 100%;
-      text-align: center;           /* centraliza o texto selecionado */
-      text-align-last: center;      /* centraliza a opção exibida */
+      text-align: center;           
+      text-align-last: center;      
       padding: 6px;
       border-radius: 8px;
       border: 1px solid #2563eb;
       background-color: #e7f0ff;
-      appearance: none;             /* remove seta padrão p/ estilizar */
+      appearance: none;            
     }
 
-    /* Centraliza também o texto das opções na lista suspensa */
+    
     .scale select option {
       text-align: center;
 }
@@ -153,7 +153,7 @@
 
   <header>
     <div class="logo">
-      {{-- Se quiser imagem de logo: <img src="{{ asset('imagens/logo.png') }}" alt="Logo" style="height:45px;margin-right:10px;vertical-align:middle;"> --}}
+      
       MeuSite
     </div>
 

@@ -9,3 +9,132 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+/* Container fluido e centralizado */
+.container {
+  width: min(100%, 1100px);
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+/* Cards consistentes */
+.card {
+  background: #fff;
+  border: 1px solid rgba(2,6,23,.08);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(2,6,23,.04);
+}
+
+/* Grid padrão: 1 col no mobile, 2 cols em telas médias+ */
+.grid {
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+/* Botões reutilizáveis */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0f172a;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .06s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.btn-secondary { background-color: #1e293b; }
+.btn-primary:hover,
+.btn-secondary:hover { background-color: #0b1222; }
+.btn-primary:active,
+.btn-secondary:active { transform: translateY(1px); }
+
+/* Nos celulares, botão ocupa a largura toda e afasta do texto acima */
+@media (max-width: 480px) {
+  .btn-primary,
+  .btn-secondary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 16px; /* 👈 espaço acima do botão */
+  }
+}
+
+/* Espaçamentos utilitários */
+.mt-10 { margin-top: 10px; }
+.mt-16 { margin-top: 16px; }
+.mt-20 { margin-top: 20px; }
+.mt-32 { margin-top: 32px; }
+
+/* Form: inputs fluidos e “tocáveis” */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-height: 44px; /* área de toque confortável */
+}
+
+/* Barrinhas de resultado no teste */
+.bar {
+  position: relative;
+  height: 10px;
+  flex: 1 1 auto;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bar > span {
+  display: block;
+  height: 100%;
+  background: #0f172a;
+}
+
+/* Tipografia fluida: títulos/ subtítulos ajustam com a tela */
+.header .title { 
+  font-weight: 800; 
+  color: #0f172a; 
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem); 
+}
+.header .subtitle { 
+  color: #64748b; 
+  font-size: clamp(.9rem, 2vw, 1rem); 
+}
+
+/* Layout do formulário: 1 coluna no mobile, 2 no desktop */
+.row.cols-2 {
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .row.cols-2 { grid-template-columns: 1fr 1fr; }
+}
+
+/* Responsivo específico para o card de resultado: empilha bem */
+.result {
+  display: grid;
+  gap: 14px;
+}
+@media (min-width: 768px) {
+  .result { grid-template-columns: 1.2fr 1fr 1fr; align-items: start; }
+}
+
+/* Estrelas do teste: aumente a área de toque no mobile */
+.stars input[type="radio"] { display: none; }
+.stars label {
+  font-size: 24px; cursor: pointer; user-select: none; padding: 4px;
+}
+@media (max-width: 480px) {
+  .stars label { font-size: 28px; padding: 6px; }
+}
